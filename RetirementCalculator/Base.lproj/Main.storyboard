@@ -1,24 +1,104 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="HGA-Cs-5B6">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <scene sceneID="nC2-U3-53r">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController id="HGA-Cs-5B6" customClass="ViewController" customModule="RetirementCalculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wD3-2H-twA">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Monthly investments" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uyI-D4-13p">
+                                <rect key="frame" x="20" y="44" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Your current age" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YCH-QV-WF6">
+                                <rect key="frame" x="20" y="86" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Your planned retirement age" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gbS-Se-Q8H">
+                                <rect key="frame" x="20" y="128" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Average interest rate of investments" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RRv-lr-7YL">
+                                <rect key="frame" x="20" y="170" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Current savings" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ndv-ba-itV">
+                                <rect key="frame" x="20" y="212" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r1n-Fl-QnA">
+                                <rect key="frame" x="20" y="254" width="374" height="30"/>
+                                <color key="backgroundColor" red="0.26274509800000001" green="0.57254901960000004" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Calculate retirement amount">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="calculateButton_TouchUpInside:" destination="HGA-Cs-5B6" eventType="touchUpInside" id="ig5-h6-Ebt"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter some values to calculate your retirement amount." lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cjB-dy-gJ1">
+                                <rect key="frame" x="20" y="292" width="374" height="82"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="82" id="3vI-WV-r8g"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="3CI-hZ-hf6"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <constraints>
+                            <constraint firstItem="ndv-ba-itV" firstAttribute="leading" secondItem="3CI-hZ-hf6" secondAttribute="leading" constant="20" id="9Ph-rR-hZI"/>
+                            <constraint firstItem="cjB-dy-gJ1" firstAttribute="top" secondItem="r1n-Fl-QnA" secondAttribute="bottom" constant="8" id="Dzy-AZ-bo2"/>
+                            <constraint firstItem="3CI-hZ-hf6" firstAttribute="trailing" secondItem="uyI-D4-13p" secondAttribute="trailing" constant="20" id="EPo-0C-OLB"/>
+                            <constraint firstItem="r1n-Fl-QnA" firstAttribute="top" secondItem="ndv-ba-itV" secondAttribute="bottom" constant="8" id="HDo-Od-7Hm"/>
+                            <constraint firstItem="ndv-ba-itV" firstAttribute="top" secondItem="RRv-lr-7YL" secondAttribute="bottom" constant="8" id="JpI-i1-cMj"/>
+                            <constraint firstItem="r1n-Fl-QnA" firstAttribute="leading" secondItem="3CI-hZ-hf6" secondAttribute="leading" constant="20" id="Q8x-ZB-4Qh"/>
+                            <constraint firstItem="uyI-D4-13p" firstAttribute="leading" secondItem="3CI-hZ-hf6" secondAttribute="leading" constant="20" id="R6i-B3-nOp"/>
+                            <constraint firstItem="cjB-dy-gJ1" firstAttribute="leading" secondItem="3CI-hZ-hf6" secondAttribute="leading" constant="20" id="aBM-F5-32H"/>
+                            <constraint firstItem="RRv-lr-7YL" firstAttribute="top" secondItem="gbS-Se-Q8H" secondAttribute="bottom" constant="8" id="aor-Eg-7bI"/>
+                            <constraint firstItem="YCH-QV-WF6" firstAttribute="leading" secondItem="3CI-hZ-hf6" secondAttribute="leading" constant="20" id="bwd-xD-8LC"/>
+                            <constraint firstItem="3CI-hZ-hf6" firstAttribute="trailing" secondItem="RRv-lr-7YL" secondAttribute="trailing" constant="20" id="cWr-H8-H1h"/>
+                            <constraint firstItem="uyI-D4-13p" firstAttribute="top" secondItem="3CI-hZ-hf6" secondAttribute="top" id="dJC-ZP-kUM"/>
+                            <constraint firstItem="3CI-hZ-hf6" firstAttribute="trailing" secondItem="r1n-Fl-QnA" secondAttribute="trailing" constant="20" id="fgg-Ri-biO"/>
+                            <constraint firstItem="3CI-hZ-hf6" firstAttribute="trailing" secondItem="ndv-ba-itV" secondAttribute="trailing" constant="20" id="ikY-l1-ltU"/>
+                            <constraint firstItem="3CI-hZ-hf6" firstAttribute="trailing" secondItem="gbS-Se-Q8H" secondAttribute="trailing" constant="20" id="inM-O5-vo2"/>
+                            <constraint firstItem="RRv-lr-7YL" firstAttribute="leading" secondItem="3CI-hZ-hf6" secondAttribute="leading" constant="20" id="k10-1v-7Vm"/>
+                            <constraint firstItem="3CI-hZ-hf6" firstAttribute="trailing" secondItem="YCH-QV-WF6" secondAttribute="trailing" constant="20" id="mNf-za-nSp"/>
+                            <constraint firstItem="gbS-Se-Q8H" firstAttribute="top" secondItem="YCH-QV-WF6" secondAttribute="bottom" constant="8" id="mVM-cF-Jyx"/>
+                            <constraint firstItem="3CI-hZ-hf6" firstAttribute="trailing" secondItem="cjB-dy-gJ1" secondAttribute="trailing" constant="20" id="osG-tZ-RA1"/>
+                            <constraint firstItem="YCH-QV-WF6" firstAttribute="top" secondItem="uyI-D4-13p" secondAttribute="bottom" constant="8" id="tJh-O9-4Sm"/>
+                            <constraint firstItem="gbS-Se-Q8H" firstAttribute="leading" secondItem="3CI-hZ-hf6" secondAttribute="leading" constant="20" id="uzV-M9-zwp"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="ageTextField" destination="YCH-QV-WF6" id="FQO-GR-T7l"/>
+                        <outlet property="interestRateTextField" destination="RRv-lr-7YL" id="KO1-JL-yyu"/>
+                        <outlet property="monthlyInvestmentsTextField" destination="uyI-D4-13p" id="9kO-Ag-Hn7"/>
+                        <outlet property="resultLabel" destination="cjB-dy-gJ1" id="WAR-ek-jmN"/>
+                        <outlet property="retirementAgeTextField" destination="gbS-Se-Q8H" id="aez-dq-wjU"/>
+                        <outlet property="savingsTextField" destination="ndv-ba-itV" id="W4R-iq-sgO"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aKZ-Uw-2Fl" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
         </scene>
     </scenes>
 </document>
