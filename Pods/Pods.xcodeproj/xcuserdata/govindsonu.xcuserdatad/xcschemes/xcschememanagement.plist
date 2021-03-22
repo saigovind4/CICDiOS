@@ -6,23 +6,54 @@
 	<dict>
 		<key>AppCenter.xcscheme_^#shared#^_</key>
 		<dict>
+			<key>isShown</key>
+			<false/>
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
 		<key>Pods-RetirementCalculator.xcscheme_^#shared#^_</key>
 		<dict>
+			<key>isShown</key>
+			<false/>
 			<key>orderHint</key>
 			<integer>4</integer>
 		</dict>
 		<key>Pods-RetirementCalculatorTests.xcscheme_^#shared#^_</key>
 		<dict>
+			<key>isShown</key>
+			<false/>
 			<key>orderHint</key>
 			<integer>1</integer>
 		</dict>
 		<key>Pods-RetirementCalculatorUITests.xcscheme_^#shared#^_</key>
 		<dict>
+			<key>isShown</key>
+			<false/>
 			<key>orderHint</key>
 			<integer>3</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>0F9DE8225D9CBD733FF67143401A1998</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9AE3BAAE785BE2D87FBF0E48AB1FF70A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A3282A5B2437E609EEB85861D7ECE717</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>AB522D64B069F07E00CC3773750F91A0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>
